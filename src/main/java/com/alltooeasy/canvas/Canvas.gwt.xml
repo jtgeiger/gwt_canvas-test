@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to="canvas">
+  <!-- Inherit the core Web Toolkit stuff.                        -->
+  <inherits name="com.google.gwt.core.Core"/>
+  <inherits name='com.google.gwt.user.User'/>
+  
+  <!-- Other module inherits                                      -->
+  <inherits name="com.google.gwt.precompress.Precompress"/>
+
+  <!-- Specify the app entry point class.                         -->
+  <entry-point class='com.alltooeasy.canvas.client.app.CanvasDemo'/>
+
+  <!-- Client-side logging stuff.
+       From client-side use java.util.logging.Logger.getLogger(String)
+       e.g. final static private Logger log = Logger.getLogger(IndividualSummaryWidget.class.getName());
+       
+       The levels in descending order are:
+        OFF	
+        SEVERE (highest value)
+        WARNING
+        INFO
+        CONFIG
+        FINE
+        FINER
+        FINEST (lowest value)
+        ALL
+        
+       The default level specified below can be overridden at runtime by using
+       the &logLevel=INFO query parameter on the URL.
+  -->
+  <inherits name="com.google.gwt.logging.Logging"/>
+  <set-property name="gwt.logging.enabled" value="TRUE"/> 
+  <set-property name="gwt.logging.logLevel" value="WARNING"/>
+  <set-property name="gwt.logging.consoleHandler" value="DISABLED" />   <!-- Browser's console -->
+  <set-property name="gwt.logging.developmentModeHandler" value="ENABLED" /> <!-- GWT.log(); compiles out. -->
+  <set-property name="gwt.logging.firebugHandler" value="DISABLED" />
+  <set-property name="gwt.logging.popupHandler" value="DISABLED" />
+  <set-property name="gwt.logging.simpleRemoteHandler" value="ENABLED" />   <!-- Server-side servlet /[module]/remote_logging -->
+  <set-property name="gwt.logging.systemHandler" value="DISABLED" /> <!-- Server-side System.out; compiles out. -->
+<!--   These settings are needed to enable server-side stack deobfuscation, however they cause the
+       compiled javascript modules to double in size!  (Tested with GWT 2.4.0 & 2.5.0-rc1.)
+  <set-property name="compiler.stackMode" value="emulated"/>
+  <set-configuration-property name="compiler.emulatedStack.recordLineNumbers" value="true"/>
+ -->
+
+  <!-- Specify the paths for translatable code                    -->
+  <source path='client'/>
+  <source path='shared'/>
+  
+  <!-- Testing only: Force the GWT compiler to create a single
+       permutation for the named browser only. -->
+<!--   <set-property name="user.agent" value="gecko1_8"/> -->
+  
+</module>
