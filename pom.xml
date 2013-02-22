@@ -69,7 +69,7 @@
           <execution>
             <configuration>
 	    <modules>
-	      <module>com.alltooeasy.canvas.Canvas</module>
+	      <module>canvas</module>
 	    </modules>
             </configuration>
             <goals>
@@ -85,7 +85,7 @@
         <!-- Plugin configuration. There are many available options, see
           gwt-maven-plugin documentation at codehaus.org -->
         <configuration>
-          <runTarget>/canvas/</runTarget>
+          <runTarget>/</runTarget>
           <disableClassMetadata>true</disableClassMetadata>
           <hostedWebapp>${webappDirectory}</hostedWebapp>
 	  <!--
@@ -120,12 +120,13 @@
           <target>1.6</target>
         </configuration>
       </plugin>
-
+<!--
 <plugin>
   <groupId>org.mortbay.jetty</groupId>
   <artifactId>jetty-maven-plugin</artifactId>
   <version>8.1.1.v20120215</version>
 </plugin>
+-->
     </plugins>
   </build>
 
